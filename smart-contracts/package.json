@@ -1,0 +1,24 @@
+{
+  "name": "blockchain-smart-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for the blockchain system",
+  "main": "truffle-config.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "2.1.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "5.0.0",
+    "@nomiclabs/hardhat-ethers": "2.2.3",
+    "@openzeppelin/contracts": "5.1.0",
+    "chai": "5.1.2",
+    "ganache-cli": "6.12.2",
+    "hardhat": "2.22.16",
+    "truffle": "5.8.0"
+  }
+}

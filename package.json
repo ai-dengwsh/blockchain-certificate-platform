@@ -1,0 +1,38 @@
+{
+  "name": "blockchain-certificate-platform",
+  "version": "1.0.0",
+  "description": "区块链证书管理平台",
+  "author": "ai-dengwsh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ai-dengwsh/blockchain-certificate-platform.git"
+  },
+  "keywords": [
+    "blockchain",
+    "certificate",
+    "ethereum",
+    "nft",
+    "smart-contract"
+  ],
+  "scripts": {
+    "test": "npm run test:contracts && npm run test:backend && npm run test:frontend",
+    "test:contracts": "cd smart-contracts && npx hardhat test",
+    "test:backend": "cd backend && npm test",
+    "test:frontend": "cd frontend && npm test",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "npm run build:contracts && npm run build:backend && npm run build:frontend",
+    "build:contracts": "cd smart-contracts && npx hardhat compile",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "8.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
